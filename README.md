@@ -3,12 +3,17 @@
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
 [![SQL](https://img.shields.io/badge/SQL-SQLite-003B57?style=flat&logo=sqlite&logoColor=white)](https://www.sqlite.org/)
 [![NF Agent](https://img.shields.io/badge/NF_Agent-Gmail%20%7C%20Demo-2563eb?style=flat)](#nf-agent--demo-vs-produção)
+[![Production](https://img.shields.io/badge/Production--inspired-Synthetic%20demo-orange?style=flat)](#)
+[![Tests](https://img.shields.io/badge/tests-unittest-brightgreen?style=flat)](#testes)
 
-**NF Agent** (Python) + análise **DRE gerencial** (REAL / ORÇADO / EBITDA) com SQL reprodutível.
-Portfólio de **Denner Martins** — Dados, BI e Finanças Corporativas.
+**Analista de Dados/BI · Finanças · DRE · Automação operacional**
 
-> **Aviso:** versão pública com **dados 100% sintéticos**. Inspirado em automação real de ambiente corporativo (Gmail + Python + controle orçamentário CMEF). Não contém informações de empresas reais.
+NF Agent (Python) + análise **DRE gerencial** (REAL / ORÇADO / EBITDA) com SQL reprodutível.  
+Portfólio de **Denner Martins** — não é portfólio genérico de dashboard: é **problema de negócio + automação real + métricas auditáveis**.
 
+> **Aviso:** dados **100% sintéticos** neste repo. Inspirado em automação corporativa real (Gmail + CMEF + DRE). Sem dados de empresas reais.
+
+**English summary:** Production-inspired invoice automation agent (Python/Gmail API) with duplicate detection, audit CSV, and managerial P&L SQL analysis (budget vs actual, EBITDA, CMEF cost centers). Public demo uses synthetic data only.
 ---
 
 ## O problema
@@ -22,12 +27,23 @@ Portfólio de **Denner Martins** — Dados, BI e Finanças Corporativas.
 
 > Este repositório **não replica o painel DRE corporativo** — ele demonstra a **lógica analítica** que o profissional aplica sobre esses indicadores, com dados 100% fictícios.
 
-## A solução
+## Arquitetura
 
-```
-Inbox (demo) → Extração XML → Anti-duplicata → Biblioteca padronizada → CSV → SQLite → SQL → Relatório
+```mermaid
+flowchart LR
+  A[Gmail / Demo inbox] --> B[NF Agent Python]
+  B --> C[Extração PDF/XML]
+  C --> D[Anti-duplicata]
+  D --> E[Biblioteca Fornecedor/Data]
+  E --> F[CSV auditoria]
+  F --> G[SQLite]
+  G --> H[SQL DRE CMEF]
+  H --> I[RESULTS.md]
 ```
 
+📖 Detalhes: [`docs/nf_agent_architecture.md`](docs/nf_agent_architecture.md) · [`docs/business_impact.md`](docs/business_impact.md) · [`docs/interview_pitch.md`](docs/interview_pitch.md)
+
+---
 | Etapa | Ferramenta |
 |-------|------------|
 | Captura NF-e | Python (demo local; produção: Gmail API) |
@@ -145,8 +161,21 @@ O analista **interpreta a DRE** no painel de BI (não modela o dashboard): REAL 
 Esta versão pública replica **arquitetura + lógica analítica** com dados fictícios.
 ---
 
-## Habilidades demonstradas
+## Testes
 
+```bash
+python -m unittest discover -s tests -v
+```
+
+Cobertura: extrator XML, anti-duplicata, organização de pastas.
+
+---
+
+## Como falar em entrevista
+
+Roteiro pronto: [`docs/interview_pitch.md`](docs/interview_pitch.md)
+
+---
 - Python (ETL, automação, organização de arquivos)
 - SQL (JOINs, CTEs, window functions, agregações)
 - Finanças (orçado x realizado, EBITDA, contas a pagar)
