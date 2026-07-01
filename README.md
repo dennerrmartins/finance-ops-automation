@@ -21,17 +21,24 @@ Portfólio de **Denner Martins** — não é portfólio genérico de dashboard: 
 
 Fluxo ponta a ponta do **NF Agent** — da captura da NF-e à análise gerencial reprodutível em SQL.
 
+![Pipeline NF Agent — Gmail/Demo → NF Agent → SQLite → DRE/CMEF → RESULTS.md](docs/assets/pipeline-diagram.svg)
+
+<details>
+<summary>Diagrama interativo (Mermaid)</summary>
+
 ```mermaid
 flowchart LR
     A["Gmail / Demo Inbox"] --> B["NF Agent em Python"]
     B --> C["Extração PDF/XML"]
-    C --> D["Validação & Anti-duplicidade"]
+    C --> D["Validação e Anti-duplicidade"]
     D --> E["Biblioteca por Fornecedor/Data"]
     E --> F["CSV de Auditoria"]
     F --> G["SQLite"]
-    G --> H["Queries SQL — DRE/CMEF"]
+    G --> H["Queries SQL - DRE/CMEF"]
     H --> I["RESULTS.md"]
 ```
+
+</details>
 
 O pipeline parte da **entrada de documentos fiscais** — no ambiente corporativo, via Gmail; na versão pública, via caixa demo com XMLs fictícios. O **NF Agent em Python** extrai metadados dos arquivos PDF/XML, aplica **validação e anti-duplicidade** (chave NF-e e hash) e organiza cada nota em uma **biblioteca auditável** por fornecedor e data. Cada execução gera um **CSV de auditoria** rastreável, que alimenta o **SQLite** analítico. A partir daí, **queries SQL** reproduzem a leitura de **DRE gerencial por linha CMEF** — REAL vs ORÇADO, variações e EBITDA — com resultados documentados em **RESULTS.md**. Toda a versão pública opera com **dados 100% sintéticos**; a arquitetura reflete uma automação real de operação financeira, sem expor informações corporativas.
 
