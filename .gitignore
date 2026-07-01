@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Dados locais gerados
+output/notas/
+output/planilhas/*.csv
+output/relatorios/
+database/*.db
+nf_registry.json
+processed_ids.json
+cnpj_supplier_names.json
+
+# Credenciais (modo Gmail opcional — não versionar)
+processed_ids.json
+credentials/
+
+# IDE
+.idea/
+.vscode/

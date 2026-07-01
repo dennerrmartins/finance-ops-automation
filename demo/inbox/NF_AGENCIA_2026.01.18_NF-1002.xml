@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompNfse xmlns="http://www.abrasf.org.br/nfse.xsd">
+  <Nfse>
+    <InfNfse>
+      <Numero>1002</Numero>
+      <DataEmissao>2026-01-18T10:30:00</DataEmissao>
+      <PrestadorServico>
+        <IdentificacaoPrestador>
+          <Cnpj>23456789000181</Cnpj>
+        </IdentificacaoPrestador>
+        <RazaoSocial>Agencia Beta Marketing SA</RazaoSocial>
+      </PrestadorServico>
+      <TomadorServico>
+        <IdentificacaoTomador>
+          <CpfCnpj><Cnpj>98765432000111</Cnpj></CpfCnpj>
+        </IdentificacaoTomador>
+      </TomadorServico>
+      <ValoresNfse>
+        <ValorLiquidoNfse>9200.50</ValorLiquidoNfse>
+      </ValoresNfse>
+    </InfNfse>
+  </Nfse>
+</CompNfse>

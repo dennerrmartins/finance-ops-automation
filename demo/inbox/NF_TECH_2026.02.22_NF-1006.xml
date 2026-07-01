@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompNfse xmlns="http://www.abrasf.org.br/nfse.xsd">
+  <Nfse>
+    <InfNfse>
+      <Numero>1006</Numero>
+      <DataEmissao>2026-02-22T10:30:00</DataEmissao>
+      <PrestadorServico>
+        <IdentificacaoPrestador>
+          <Cnpj>56789012000154</Cnpj>
+        </IdentificacaoPrestador>
+        <RazaoSocial>Tech Epsilon Servicos SA</RazaoSocial>
+      </PrestadorServico>
+      <TomadorServico>
+        <IdentificacaoTomador>
+          <CpfCnpj><Cnpj>98765432000111</Cnpj></CpfCnpj>
+        </IdentificacaoTomador>
+      </TomadorServico>
+      <ValoresNfse>
+        <ValorLiquidoNfse>7600.00</ValorLiquidoNfse>
+      </ValoresNfse>
+    </InfNfse>
+  </Nfse>
+</CompNfse>

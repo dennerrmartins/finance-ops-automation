@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompNfse xmlns="http://www.abrasf.org.br/nfse.xsd">
+  <Nfse>
+    <InfNfse>
+      <Numero>1001</Numero>
+      <DataEmissao>2026-01-10T10:30:00</DataEmissao>
+      <PrestadorServico>
+        <IdentificacaoPrestador>
+          <Cnpj>12345678000190</Cnpj>
+        </IdentificacaoPrestador>
+        <RazaoSocial>Fornecedor Alpha Ltda</RazaoSocial>
+      </PrestadorServico>
+      <TomadorServico>
+        <IdentificacaoTomador>
+          <CpfCnpj><Cnpj>98765432000111</Cnpj></CpfCnpj>
+        </IdentificacaoTomador>
+      </TomadorServico>
+      <ValoresNfse>
+        <ValorLiquidoNfse>18500.00</ValorLiquidoNfse>
+      </ValoresNfse>
+    </InfNfse>
+  </Nfse>
+</CompNfse>
